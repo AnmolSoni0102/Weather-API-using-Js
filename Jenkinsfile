@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Deploy to Remote') {
             steps {
-                bat "scp -r C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\weather-pipeline\\* root@${staging_server}:/var/www/html/"
+                sh "scp -r C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\weather-pipeline\\* root@${staging_server}:/var/www/html/"
             }
         }
     }
